@@ -10,12 +10,12 @@ import com.example.invoiceJavaBackend.entity.ContractorEntity;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-//import javax.transaction.Transactional;
+import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
 @Repository
-//@Transactional
+@Transactional
 public class HibernateContractorRepository implements ContractorRepository{
 
     @Autowired
