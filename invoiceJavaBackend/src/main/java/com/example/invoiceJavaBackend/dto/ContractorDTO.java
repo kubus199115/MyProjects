@@ -66,4 +66,10 @@ public class ContractorDTO {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "ContractorDTO [address=" + address + ", email=" + email + ", name=" + name + ", phone=" + phone
+                + ", regon=" + regon + ", taxId=" + taxId + "]";
+    }
+
 }

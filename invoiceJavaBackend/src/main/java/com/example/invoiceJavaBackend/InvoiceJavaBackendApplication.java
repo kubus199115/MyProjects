@@ -1,5 +1,7 @@
 package com.example.invoiceJavaBackend;
 
+import java.util.List;
+
 import com.example.invoiceJavaBackend.dto.ContractorDTO;
 import com.example.invoiceJavaBackend.repository.ContractorRepository;
 
@@ -32,7 +34,19 @@ public class InvoiceJavaBackendApplication {
 
 			repository.addContractor(contractorDTO);
 
-			log.info("Contractor added");
+			contractorDTO.setName("Firma 2");
+			contractorDTO.setAddress("ul. Polska 23");
+			contractorDTO.setTaxId("123-123-11-23");
+			contractorDTO.setRegon("123456722");
+			contractorDTO.setPhone("121234123");
+			contractorDTO.setEmail("firma2@po.pl");
+
+			repository.addContractor(contractorDTO);
+
+			List<ContractorDTO> contractors = repository.findAllContractor();
+
+			contractors.forEach(con -> log.info(con.toString()));
+			
 		};
 	}
 
