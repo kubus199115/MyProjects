@@ -28,7 +28,7 @@ public class HibernateContractorRepository implements ContractorRepository{
         ContractorEntity contractorEntity = new ContractorEntity();
         ContractorConverter.changeDTOToEntity(contractorDTO, contractorEntity);
 
-        sessionFactory.getCurrentSession().save(contractorEntity);
+        sessionFactory.openSession().save(contractorEntity);
         
     }
 
@@ -36,7 +36,7 @@ public class HibernateContractorRepository implements ContractorRepository{
     @Override
     public List<ContractorDTO> findAllContractor() {
         
-        List<ContractorEntity> contractorEntities = sessionFactory.getCurrentSession().
+        List<ContractorEntity> contractorEntities = sessionFactory.openSession().
                 createQuery("from Contractor", ContractorEntity.class).list();
 
         List<ContractorDTO> contractorDTOs = new ArrayList<>();
