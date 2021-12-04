@@ -8,5 +8,6 @@ public interface ContractorRepository {
     
     public void addContractor(ContractorDTO contractorDTO);
     public List<ContractorDTO> findAllContractor();
+    public ContractorDTO findContractorByName(String name);
 
 }

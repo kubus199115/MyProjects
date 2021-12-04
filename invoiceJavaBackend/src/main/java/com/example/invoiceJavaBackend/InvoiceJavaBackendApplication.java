@@ -46,6 +46,9 @@ public class InvoiceJavaBackendApplication {
 			List<ContractorDTO> contractors = repository.findAllContractor();
 
 			contractors.forEach(con -> log.info(con.toString()));
+
+			ContractorDTO contractorDTO2 = repository.findContractorByName("Firma 1");
+			log.info(contractorDTO2.toString());
 			
 		};
 	}

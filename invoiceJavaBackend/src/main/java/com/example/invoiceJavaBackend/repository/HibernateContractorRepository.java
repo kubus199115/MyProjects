@@ -46,5 +46,24 @@ public class HibernateContractorRepository implements ContractorRepository{
         return contractorDTOs;
 
     }
+
+    // finding contractor by name, return null if not find
+    @Override
+    public ContractorDTO findContractorByName(String name) {
+        
+        ContractorEntity contractorEntity = entityManager.createQuery("select c from ContractorEntity c where c.name = ?1", 
+                    ContractorEntity.class)
+                    .setParameter(1, name).getSingleResult();
+
+        if (contractorEntity != null) {
+            ContractorDTO contractorDTO = new ContractorDTO();
+            ContractorConverter.changeEntityToDTO(contractorEntity, contractorDTO);
+            return contractorDTO;
+        }
+
+        // if not find, return null
+        return null;
+
+    }
  
 }
