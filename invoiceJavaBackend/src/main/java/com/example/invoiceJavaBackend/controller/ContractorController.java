@@ -33,7 +33,7 @@ public class ContractorController {
 
     }
 
-    // TO DO: writing exceptions handler class
+    // TO DO: writing exceptions handler class (javax.persistence.NoResultException)
     @GetMapping("/getContractor/{name}")
     public ContractorDTO getContractor(@PathVariable String name) {
 
