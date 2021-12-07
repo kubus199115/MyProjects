@@ -2,6 +2,7 @@ package com.example.invoiceJavaBackend.controller;
 
 import java.util.List;
 
+import com.example.invoiceJavaBackend.customException.UniqueContractorNameException;
 import com.example.invoiceJavaBackend.dto.ContractorDTO;
 import com.example.invoiceJavaBackend.repository.ContractorRepository;
 
@@ -18,9 +19,13 @@ public class ContractorController {
     @Autowired
     private ContractorRepository contractorRepository;
 
-    // TO DO: writing unique name check
     @PostMapping("/addContractor")
-    public void addContractor(@RequestBody ContractorDTO contractorDTO) {
+    public void addContractor(@RequestBody ContractorDTO contractorDTO) throws UniqueContractorNameException {
+
+        // check if contractor name exist in db
+        ContractorDTO contractor = contractorRepository.findContractorByName(contractorDTO.getName());
+        if(contractor != null)
+            throw new UniqueContractorNameException();
 
         contractorRepository.addContractor(contractorDTO);
 
@@ -33,7 +38,7 @@ public class ContractorController {
 
     }
 
-    // TO DO: writing exceptions handler class (javax.persistence.NoResultException)
+    // javax.persistence.NoResultException if not result found
     @GetMapping("/getContractor/{name}")
     public ContractorDTO getContractor(@PathVariable String name) {
 
