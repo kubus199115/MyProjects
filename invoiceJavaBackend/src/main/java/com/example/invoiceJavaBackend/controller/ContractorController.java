@@ -2,6 +2,8 @@ package com.example.invoiceJavaBackend.controller;
 
 import java.util.List;
 
+import javax.persistence.NoResultException;
+import javax.validation.Valid;
 import com.example.invoiceJavaBackend.customException.UniqueContractorNameException;
 import com.example.invoiceJavaBackend.dto.ContractorDTO;
 import com.example.invoiceJavaBackend.repository.ContractorRepository;
@@ -15,19 +17,24 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ContractorController {
-    
+
     @Autowired
     private ContractorRepository contractorRepository;
 
     @PostMapping("/addContractor")
-    public void addContractor(@RequestBody ContractorDTO contractorDTO) throws UniqueContractorNameException {
+    public void addContractor(@Valid @RequestBody ContractorDTO contractorDTO) throws UniqueContractorNameException {
 
+        ContractorDTO contractor = null;
         // check if contractor name exist in db
-        ContractorDTO contractor = contractorRepository.findContractorByName(contractorDTO.getName());
+        try {
+            contractor = contractorRepository.findContractorByName(contractorDTO.getName());
+        } catch(NoResultException ex) {
+            contractorRepository.addContractor(contractorDTO);
+        }
+        
+        // if contractor not finded, throw exception
         if(contractor != null)
             throw new UniqueContractorNameException();
-
-        contractorRepository.addContractor(contractorDTO);
 
     }
 

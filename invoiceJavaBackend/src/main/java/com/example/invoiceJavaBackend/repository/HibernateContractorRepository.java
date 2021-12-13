@@ -10,6 +10,7 @@ import com.example.invoiceJavaBackend.entity.ContractorEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
@@ -47,22 +48,18 @@ public class HibernateContractorRepository implements ContractorRepository{
 
     }
 
-    // finding contractor by name, return null if not find
+    // finding contractor by name, throw NoResultException if not find
     @Override
-    public ContractorDTO findContractorByName(String name) {
+    public ContractorDTO findContractorByName(String name) throws NoResultException{
         
         ContractorEntity contractorEntity = entityManager.createQuery("select c from ContractorEntity c where c.name = ?1", 
                     ContractorEntity.class)
                     .setParameter(1, name).getSingleResult();
 
-        if (contractorEntity != null) {
-            ContractorDTO contractorDTO = new ContractorDTO();
-            ContractorConverter.changeEntityToDTO(contractorEntity, contractorDTO);
-            return contractorDTO;
-        }
-
-        // if not find, return null
-        return null;
+        
+        ContractorDTO contractorDTO = new ContractorDTO();
+        ContractorConverter.changeEntityToDTO(contractorEntity, contractorDTO);
+        return contractorDTO;
 
     }
  

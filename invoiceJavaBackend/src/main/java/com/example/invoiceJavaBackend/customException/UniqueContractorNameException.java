@@ -1,6 +1,6 @@
 package com.example.invoiceJavaBackend.customException;
 
-public class UniqueContractorNameException extends Exception{
+public class UniqueContractorNameException extends RuntimeException{
 
     public UniqueContractorNameException() {}
 

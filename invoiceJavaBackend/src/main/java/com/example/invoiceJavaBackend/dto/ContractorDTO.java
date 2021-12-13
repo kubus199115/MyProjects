@@ -1,11 +1,16 @@
 package com.example.invoiceJavaBackend.dto;
 
+import javax.validation.constraints.NotEmpty;
+
 public class ContractorDTO {
     
+    @NotEmpty
     private String name;
 
+    @NotEmpty
     private String address;
 
+    @NotEmpty
     private String taxId;
 
     private String regon;
