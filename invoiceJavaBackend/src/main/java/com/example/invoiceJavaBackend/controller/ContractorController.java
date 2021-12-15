@@ -22,7 +22,7 @@ public class ContractorController {
     private ContractorRepository contractorRepository;
 
     @PostMapping("/addContractor")
-    public void addContractor(@Valid @RequestBody ContractorDTO contractorDTO) throws UniqueContractorNameException {
+    public void addContractor(@Valid @RequestBody ContractorDTO contractorDTO) {
 
         ContractorDTO contractor = null;
         // check if contractor name exist in db
@@ -32,7 +32,7 @@ public class ContractorController {
             contractorRepository.addContractor(contractorDTO);
         }
         
-        // if contractor not finded, throw exception
+        // if contractor name exist, throw exception
         if(contractor != null)
             throw new UniqueContractorNameException();
 
@@ -41,7 +41,7 @@ public class ContractorController {
     @GetMapping("/getContractors")
     public List<ContractorDTO> getContractors() {
         
-        return contractorRepository.findAllContractor();
+        return contractorRepository.findAllContractors();
 
     }
 

@@ -1,9 +1,16 @@
 package com.example.invoiceJavaBackend;
 
+import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.example.invoiceJavaBackend.dto.ContractorDTO;
+import com.example.invoiceJavaBackend.dto.InvoiceDTO;
+import com.example.invoiceJavaBackend.dto.InvoiceDetailsDTO;
+import com.example.invoiceJavaBackend.dto.ItemDTO;
 import com.example.invoiceJavaBackend.repository.ContractorRepository;
+import com.example.invoiceJavaBackend.repository.InvoiceRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,7 +29,7 @@ public class InvoiceJavaBackendApplication {
 	}
 
 	@Bean
-  	public CommandLineRunner demo(ContractorRepository repository) {
+  	public CommandLineRunner demo(ContractorRepository repository, InvoiceRepository invoiceRepository) {
 		return (args) -> {
 			ContractorDTO contractorDTO = new ContractorDTO();
 			contractorDTO.setName("Firma 1");
@@ -43,12 +50,42 @@ public class InvoiceJavaBackendApplication {
 
 			repository.addContractor(contractorDTO);
 
-			List<ContractorDTO> contractors = repository.findAllContractor();
-
-			contractors.forEach(con -> log.info(con.toString()));
-
 			ContractorDTO contractorDTO2 = repository.findContractorByName("Firma 1");
-			log.info(contractorDTO2.toString());
+			
+			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+			InvoiceDTO invoiceDTO = new InvoiceDTO();
+			invoiceDTO.setInvoiceNumber("01/01/2021");
+			invoiceDTO.setPlaceOfIssue("Kutno");
+			invoiceDTO.setDateOfIssue(formatter.parse("2021-03-03"));
+			invoiceDTO.setDateOfSale(formatter.parse("2021-03-03"));
+			invoiceDTO.setMethodOfPayment("cash");
+			invoiceDTO.setDateOfPayment("-");
+			invoiceDTO.setTotalValue(new BigDecimal("2.46"));
+			invoiceDTO.setRemarks("-");
+
+			List<ItemDTO> items = new ArrayList<>();
+
+			ItemDTO itemDTO = new ItemDTO();
+			itemDTO.setName("Bin");
+			itemDTO.setPkwiu("23io0");
+			itemDTO.setQuantity(2);
+			itemDTO.setUnit("szt.");
+			itemDTO.setNetPrice(new BigDecimal("1.00"));
+			itemDTO.setNetValue(new BigDecimal("2.00"));
+			itemDTO.setTaxRate(new BigDecimal("0.23"));
+			itemDTO.setTaxValue(new BigDecimal("0.46"));
+			itemDTO.setGrossValue(new BigDecimal("2.46"));
+
+			items.add(itemDTO);
+
+			InvoiceDetailsDTO invoiceDetailsDTO = new InvoiceDetailsDTO();
+			invoiceDetailsDTO.setInvoice(invoiceDTO);
+			invoiceDetailsDTO.setContractor(contractorDTO2);
+			invoiceDetailsDTO.setItems(items);
+
+			invoiceRepository.addInvoice(invoiceDetailsDTO);
+			log.info("added");
 			
 		};
 	}

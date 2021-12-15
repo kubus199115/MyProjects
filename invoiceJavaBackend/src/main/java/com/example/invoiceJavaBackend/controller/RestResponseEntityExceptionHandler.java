@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.persistence.NoResultException;
 
 import com.example.invoiceJavaBackend.customException.UniqueContractorNameException;
+import com.example.invoiceJavaBackend.customException.UniqueInvoiceNumberException;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -34,6 +35,14 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
     protected ResponseEntity<Object> handleUniqueContructorName(
       RuntimeException ex, WebRequest request) {
         return handleExceptionInternal(ex, "This contractor name already exist", 
+        new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR, request);
+    }
+
+    // handle unique invoice number exception
+    @ExceptionHandler(value = {UniqueInvoiceNumberException.class})
+    protected ResponseEntity<Object> handleUniqueInvoiceNumber(
+      RuntimeException ex, WebRequest request) {
+        return handleExceptionInternal(ex, "This invoice number already exist", 
         new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR, request);
     }
 

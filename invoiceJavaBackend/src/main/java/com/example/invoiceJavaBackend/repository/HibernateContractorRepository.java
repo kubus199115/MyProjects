@@ -35,7 +35,7 @@ public class HibernateContractorRepository implements ContractorRepository{
 
     // finding all contractors and returning as dto list
     @Override
-    public List<ContractorDTO> findAllContractor() {
+    public List<ContractorDTO> findAllContractors() {
         
         List<ContractorEntity> contractorEntities = 
                     entityManager.createQuery("select c from ContractorEntity c", 
@@ -60,6 +60,18 @@ public class HibernateContractorRepository implements ContractorRepository{
         ContractorDTO contractorDTO = new ContractorDTO();
         ContractorConverter.changeEntityToDTO(contractorEntity, contractorDTO);
         return contractorDTO;
+
+    }
+
+    // finding contractor entity by name
+    @Override
+    public ContractorEntity findContractorEntityByName(String name) {
+        
+        ContractorEntity contractorEntity = entityManager.createQuery("select c from ContractorEntity c where c.name = ?1", 
+                    ContractorEntity.class)
+                    .setParameter(1, name).getSingleResult();
+
+        return contractorEntity;
 
     }
  
