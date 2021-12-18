@@ -1,5 +1,5 @@
 # invoiceJavaBackend
-Invoice management backend application
+Invoice management backend application written in Spring boot and JPA
 
 It requires jdk >=11
 
