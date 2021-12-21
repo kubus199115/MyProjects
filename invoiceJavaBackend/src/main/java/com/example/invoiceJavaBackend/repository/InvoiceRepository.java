@@ -8,7 +8,8 @@ import com.example.invoiceJavaBackend.dto.InvoiceDetailsDTO;
 public interface InvoiceRepository {
 
     public void addInvoice(InvoiceDetailsDTO invoiceDetailsDTO);
-    public InvoiceDTO findInvoiceByNumber(String number);
+    public InvoiceDTO findInvoiceByNumber(String invoiceNumber);
+    public InvoiceDetailsDTO findInvoiceDetailsByNumber(String invoiceNumber);
     public List<InvoiceDTO> findAllInvoices();
 
 }

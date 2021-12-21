@@ -12,6 +12,7 @@ import com.example.invoiceJavaBackend.repository.InvoiceRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -43,6 +44,13 @@ public class InvoiceController {
     public List<InvoiceDTO> getInvoices() {
         
         return invoiceRepository.findAllInvoices();
+
+    }
+
+    @GetMapping("/getInvoiceDetails/{invoiceNumber}")
+    public InvoiceDetailsDTO getInvoiceDetails(@PathVariable String invoiceNumber) {
+
+        return invoiceRepository.findInvoiceDetailsByNumber(invoiceNumber);
 
     }
     

@@ -3,26 +3,55 @@ package com.example.invoiceJavaBackend.dto;
 import java.math.BigDecimal;
 import java.util.Date;
 
+import javax.validation.constraints.NotEmpty;
+
 public class InvoiceDTO {
     
+    @NotEmpty
     private String invoiceNumber;
+
+    @NotEmpty
+    private String type;
     
+    @NotEmpty
     private String placeOfIssue;
 
+    @NotEmpty
     private Date dateOfIssue;
 
+    @NotEmpty
     private Date dateOfSale;
 
+    @NotEmpty
     private String methodOfPayment;
 
     private String dateOfPayment;
 
+    private String accountNumber;
+
+    @NotEmpty
     private BigDecimal totalValue;
 
     private String remarks;
 
     public InvoiceDTO() {
         
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getInvoiceNumber() {

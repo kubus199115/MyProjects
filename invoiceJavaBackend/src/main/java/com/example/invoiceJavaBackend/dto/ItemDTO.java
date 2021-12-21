@@ -2,24 +2,34 @@ package com.example.invoiceJavaBackend.dto;
 
 import java.math.BigDecimal;
 
+import javax.validation.constraints.NotEmpty;
+
 public class ItemDTO {
     
+    @NotEmpty
     private String name;
 
     private String pkwiu;
 
+    @NotEmpty
     private Integer quantity;
 
+    @NotEmpty
     private String unit;
 
+    @NotEmpty
     private BigDecimal netPrice;
 
+    @NotEmpty
     private BigDecimal netValue;
 
+    @NotEmpty
     private BigDecimal taxRate;
 
+    @NotEmpty
     private BigDecimal taxValue;
 
+    @NotEmpty
     private BigDecimal grossValue;
 
     public ItemDTO() {

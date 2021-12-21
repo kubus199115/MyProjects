@@ -7,8 +7,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.transaction.Transactional;
 
+import com.example.invoiceJavaBackend.converter.ContractorConverter;
 import com.example.invoiceJavaBackend.converter.InvoiceConverter;
 import com.example.invoiceJavaBackend.converter.ItemConverter;
+import com.example.invoiceJavaBackend.dto.ContractorDTO;
 import com.example.invoiceJavaBackend.dto.InvoiceDTO;
 import com.example.invoiceJavaBackend.dto.InvoiceDetailsDTO;
 import com.example.invoiceJavaBackend.dto.ItemDTO;
@@ -86,6 +88,36 @@ public class HibernateInvoiceRepository implements InvoiceRepository {
         InvoiceConverter.changeEntityListToDTOList(invoiceEntities, invoiceDTOs);
 
         return invoiceDTOs;
+
+    }
+
+    // getting invoice full info
+    @Override
+    public InvoiceDetailsDTO findInvoiceDetailsByNumber(String invoiceNumber) {
+        
+        InvoiceEntity invoiceEntity = entityManager.createQuery("select i from InvoiceEntity i where i.invoiceNumber = ?1", 
+                    InvoiceEntity.class)
+                    .setParameter(1, invoiceNumber).getSingleResult();
+
+        // getting realations
+        ContractorEntity contractorEntity = invoiceEntity.getContractor();
+        List<ItemEntity> itemEntities = invoiceEntity.getItems();
+
+        // converting to dto
+        InvoiceDTO invoiceDTO = new InvoiceDTO();
+        InvoiceConverter.changeEntityToDTO(invoiceEntity, invoiceDTO);
+        ContractorDTO contractorDTO = new ContractorDTO();
+        ContractorConverter.changeEntityToDTO(contractorEntity, contractorDTO);
+        List<ItemDTO> itemDTOs = new ArrayList<>();
+        ItemConverter.changeEntityListToDTOList(itemEntities, itemDTOs);
+
+        // making full invoice data
+        InvoiceDetailsDTO invoiceDetailsDTO = new InvoiceDetailsDTO();
+        invoiceDetailsDTO.setInvoice(invoiceDTO);
+        invoiceDetailsDTO.setContractor(contractorDTO);
+        invoiceDetailsDTO.setItems(itemDTOs);
+
+        return invoiceDetailsDTO;
 
     }
     

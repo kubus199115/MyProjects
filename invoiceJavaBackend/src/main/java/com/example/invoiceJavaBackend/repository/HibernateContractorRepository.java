@@ -74,5 +74,14 @@ public class HibernateContractorRepository implements ContractorRepository{
         return contractorEntity;
 
     }
+
+    // removing contractor from db
+    @Override
+    public void removeContractor(String name) {
+        
+        ContractorEntity contractorEntity = findContractorEntityByName(name);
+        entityManager.remove(contractorEntity);
+
+    }
  
 }

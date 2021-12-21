@@ -26,6 +26,10 @@ public class InvoiceEntity {
     // PL - numer faktury
     @Column(nullable=false)
     private String invoiceNumber;
+
+    // PL - typ faktury (wychodzący - outgoing; przychodzący - incoming)
+    @Column(nullable=false)
+    private String type;
     
     // PL - miejsce wydania
     @Column(nullable=false)
@@ -44,8 +48,10 @@ public class InvoiceEntity {
     private String methodOfPayment;
 
     // PL - termin płatności
-    @Column(nullable=false)
     private String dateOfPayment;
+
+    // PL - numer konta bankowego
+    private String accountNumber;
 
     // PL - wartość całkowita faktury
     @Column(nullable=false)
@@ -63,6 +69,22 @@ public class InvoiceEntity {
 
     public InvoiceEntity() {
         
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
     public BigDecimal getTotalValue() {

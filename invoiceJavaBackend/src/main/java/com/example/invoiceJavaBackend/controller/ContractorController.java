@@ -9,6 +9,7 @@ import com.example.invoiceJavaBackend.dto.ContractorDTO;
 import com.example.invoiceJavaBackend.repository.ContractorRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -45,11 +46,17 @@ public class ContractorController {
 
     }
 
-    // javax.persistence.NoResultException if not result found
     @GetMapping("/getContractor/{name}")
     public ContractorDTO getContractor(@PathVariable String name) {
 
         return contractorRepository.findContractorByName(name);
+
+    }
+    
+    @DeleteMapping("/removeContractor/{name}")
+    public void removeContractor(@PathVariable String name) {
+
+        contractorRepository.removeContractor(name);
 
     }
 

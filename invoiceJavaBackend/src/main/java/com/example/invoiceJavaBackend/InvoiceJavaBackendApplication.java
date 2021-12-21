@@ -12,8 +12,8 @@ import com.example.invoiceJavaBackend.dto.ItemDTO;
 import com.example.invoiceJavaBackend.repository.ContractorRepository;
 import com.example.invoiceJavaBackend.repository.InvoiceRepository;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,7 +22,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class InvoiceJavaBackendApplication {
 
-	private static final Logger log = LoggerFactory.getLogger(InvoiceJavaBackendApplication.class);
+	//private static final Logger log = LoggerFactory.getLogger(InvoiceJavaBackendApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(InvoiceJavaBackendApplication.class);
@@ -41,28 +41,27 @@ public class InvoiceJavaBackendApplication {
 
 			repository.addContractor(contractorDTO);
 
-			contractorDTO.setName("Firma 2");
-			contractorDTO.setAddress("ul. Polska 23");
-			contractorDTO.setTaxId("123-123-11-23");
-			contractorDTO.setRegon("123456722");
-			contractorDTO.setPhone("121234123");
-			contractorDTO.setEmail("firma2@po.pl");
+			ContractorDTO contractorDTO1 = new ContractorDTO();
+			contractorDTO1.setName("Firma 2");
+			contractorDTO1.setAddress("ul. Polska 23");
+			contractorDTO1.setTaxId("123-123-11-23");
+			contractorDTO1.setRegon("123456722");
+			contractorDTO1.setPhone("121234123");
 
-			repository.addContractor(contractorDTO);
+			repository.addContractor(contractorDTO1);
 
 			ContractorDTO contractorDTO2 = repository.findContractorByName("Firma 1");
 			
 			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
 			InvoiceDTO invoiceDTO = new InvoiceDTO();
-			invoiceDTO.setInvoiceNumber("01/01/2021");
+			invoiceDTO.setInvoiceNumber("01-01-2021");
+			invoiceDTO.setType("outgoing");
 			invoiceDTO.setPlaceOfIssue("Kutno");
 			invoiceDTO.setDateOfIssue(formatter.parse("2021-03-03"));
 			invoiceDTO.setDateOfSale(formatter.parse("2021-03-03"));
 			invoiceDTO.setMethodOfPayment("cash");
-			invoiceDTO.setDateOfPayment("-");
 			invoiceDTO.setTotalValue(new BigDecimal("2.46"));
-			invoiceDTO.setRemarks("-");
 
 			List<ItemDTO> items = new ArrayList<>();
 
@@ -85,7 +84,6 @@ public class InvoiceJavaBackendApplication {
 			invoiceDetailsDTO.setItems(items);
 
 			invoiceRepository.addInvoice(invoiceDetailsDTO);
-			log.info("added");
 			
 		};
 	}
