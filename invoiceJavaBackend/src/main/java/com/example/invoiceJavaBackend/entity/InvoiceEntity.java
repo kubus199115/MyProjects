@@ -2,6 +2,7 @@ package com.example.invoiceJavaBackend.entity;
 
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,6 +61,10 @@ public class InvoiceEntity {
     // PL - uwagi
     private String remarks;
 
+    // only in entity
+    @Column(nullable=false)
+    private Timestamp addingDate;
+
     @ManyToOne
     @JoinColumn
     private ContractorEntity contractor;
@@ -69,6 +74,14 @@ public class InvoiceEntity {
 
     public InvoiceEntity() {
         
+    }
+
+    public Timestamp getAddingDate() {
+        return addingDate;
+    }
+
+    public void setAddingDate(Timestamp addingDate) {
+        this.addingDate = addingDate;
     }
 
     public String getType() {

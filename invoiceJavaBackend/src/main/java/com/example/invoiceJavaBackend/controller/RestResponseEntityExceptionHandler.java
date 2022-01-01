@@ -45,7 +45,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
     protected ResponseEntity<Object> handleUniqueInvoiceNumber(
       RuntimeException ex, WebRequest request) {
         return handleExceptionInternal(ex, "This invoice number already exist", 
-        new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR, request);
+        new HttpHeaders(), HttpStatus.CONFLICT, request);
     }
 
 

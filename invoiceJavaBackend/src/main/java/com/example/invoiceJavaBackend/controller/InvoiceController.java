@@ -11,6 +11,7 @@ import com.example.invoiceJavaBackend.dto.InvoiceDetailsDTO;
 import com.example.invoiceJavaBackend.repository.InvoiceRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -51,6 +52,20 @@ public class InvoiceController {
     public InvoiceDetailsDTO getInvoiceDetails(@PathVariable String invoiceNumber) {
 
         return invoiceRepository.findInvoiceDetailsByNumber(invoiceNumber);
+
+    }
+
+    @GetMapping("/getNextInvoiceNumber")
+    public String getNextInvoiceNumber() {
+
+        return invoiceRepository.getNextInvoiceNumber();
+        
+    }
+
+    @DeleteMapping("/removeInvoice/{invoiceNumber}")
+    public void removeInvoice(@PathVariable String invoiceNumber) {
+
+        invoiceRepository.removeInvoice(invoiceNumber);
 
     }
     

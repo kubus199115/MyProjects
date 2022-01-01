@@ -55,11 +55,11 @@ public class InvoiceJavaBackendApplication {
 			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
 			InvoiceDTO invoiceDTO = new InvoiceDTO();
-			invoiceDTO.setInvoiceNumber("01-01-2021");
-			invoiceDTO.setType("outgoing");
+			invoiceDTO.setInvoiceNumber("1-12-2021");
+			invoiceDTO.setType("Outgoing");
 			invoiceDTO.setPlaceOfIssue("Kutno");
-			invoiceDTO.setDateOfIssue(formatter.parse("2021-03-03"));
-			invoiceDTO.setDateOfSale(formatter.parse("2021-03-03"));
+			invoiceDTO.setDateOfIssue(formatter.parse("2021-12-03"));
+			invoiceDTO.setDateOfSale(formatter.parse("2021-12-03"));
 			invoiceDTO.setMethodOfPayment("cash");
 			invoiceDTO.setTotalValue(new BigDecimal("2.46"));
 

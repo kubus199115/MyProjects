@@ -1,7 +1,11 @@
 package com.example.invoiceJavaBackend.repository;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -47,6 +51,9 @@ public class HibernateInvoiceRepository implements InvoiceRepository {
         InvoiceConverter.changeDTOToEntity(invoiceDTO, invoiceEntity);
         List<ItemEntity> itemEntities = new ArrayList<>();
         ItemConverter.changeDTOListToEntityList(itemDTOs, itemEntities);
+
+        // setting invoice adding date
+        invoiceEntity.setAddingDate(new java.sql.Timestamp(new Date().getTime()));
 
         // setting realations
         invoiceEntity.setContractor(contractorEntity);
@@ -119,6 +126,81 @@ public class HibernateInvoiceRepository implements InvoiceRepository {
 
         return invoiceDetailsDTO;
 
+    }
+
+    // generating next invoice number
+    @Override
+    public String getNextInvoiceNumber() {
+
+        String invoiceNumber = "---";
+        
+        List<InvoiceEntity> invoices = entityManager.createQuery("select i from InvoiceEntity i order by i.addingDate desc",
+                    InvoiceEntity.class)
+                    .setMaxResults(1).getResultList();
+
+        // getting actuall date
+        Date dateNow = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(dateNow);
+        int yearNow = calendar.get(Calendar.YEAR);
+        int monthNow = calendar.get(Calendar.MONTH);
+        
+        // if not invoices yet, set new number
+        if(invoices.isEmpty()) {
+            invoiceNumber = String.format("%d-%d-%d", 1, monthNow + 1, yearNow);
+        }
+        // if invoices exist, generate next number
+        else {
+            Date date = invoices.get(0).getAddingDate();
+            // getting last invoice number
+            String lastInvoiceNumber = invoices.get(0).getInvoiceNumber();
+            calendar.setTime(date);
+            int lastYear = calendar.get(Calendar.YEAR);
+            int lastMonth = calendar.get(Calendar.MONTH);
+            // check year
+            // if we have new year, set number to 1, rest from actuall date
+            if(lastYear < yearNow) {
+                invoiceNumber = String.format("%d-%d-%d", 1, monthNow + 1, yearNow);
+            }
+            // if we have the same year
+            else {
+                // if we have new month set number to 1, rest from actuall date
+                if(lastMonth < monthNow) {
+                    invoiceNumber = String.format("%d-%d-%d", 1, monthNow + 1, yearNow);
+                }
+                // if we have the same month
+                else {
+                    // get the first number from invoice number
+                    Pattern p = Pattern.compile("^(\\d+)");
+                    Matcher m = p.matcher(lastInvoiceNumber);
+                    int actuallNumber = 1000;
+                    if(m.find()) {
+                        actuallNumber = Integer.parseInt(m.group(0));
+                    }
+                    // increment actuall number from last invoice
+                    int next = ++actuallNumber;
+                    invoiceNumber = String.format("%d-%d-%d", next, monthNow + 1, yearNow);
+                }
+            }
+        }
+
+        return invoiceNumber;
+
+    }
+
+    // removing invoice from db
+    @Override
+    public void removeInvoice(String invoiceNumber) {
+        
+        InvoiceEntity invoiceEntity = entityManager.createQuery("select i from InvoiceEntity i where i.invoiceNumber = ?1", 
+                InvoiceEntity.class)
+                .setParameter(1, invoiceNumber).getSingleResult();
+
+        // remove invoice items
+        invoiceEntity.getItems().forEach(i -> entityManager.remove(i));
+
+        entityManager.remove(invoiceEntity);
+        
     }
     
 }

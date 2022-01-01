@@ -11,5 +11,7 @@ public interface InvoiceRepository {
     public InvoiceDTO findInvoiceByNumber(String invoiceNumber);
     public InvoiceDetailsDTO findInvoiceDetailsByNumber(String invoiceNumber);
     public List<InvoiceDTO> findAllInvoices();
+    public void removeInvoice(String invoiceNumber);
+    public String getNextInvoiceNumber();
 
 }

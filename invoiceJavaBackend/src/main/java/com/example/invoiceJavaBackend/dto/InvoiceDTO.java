@@ -16,10 +16,8 @@ public class InvoiceDTO {
     @NotEmpty
     private String placeOfIssue;
 
-    @NotEmpty
     private Date dateOfIssue;
 
-    @NotEmpty
     private Date dateOfSale;
 
     @NotEmpty
@@ -29,7 +27,6 @@ public class InvoiceDTO {
 
     private String accountNumber;
 
-    @NotEmpty
     private BigDecimal totalValue;
 
     private String remarks;

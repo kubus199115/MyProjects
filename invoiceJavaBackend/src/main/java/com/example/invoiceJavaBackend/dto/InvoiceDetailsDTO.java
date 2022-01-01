@@ -2,10 +2,19 @@ package com.example.invoiceJavaBackend.dto;
 
 import java.util.List;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
+
 public class InvoiceDetailsDTO {
     
+    @Valid
     private InvoiceDTO invoice;
+
+    @Valid
     private ContractorDTO contractor;
+    
+    @Valid
+    @NotEmpty
     private List<ItemDTO> items;
 
     public InvoiceDetailsDTO() {

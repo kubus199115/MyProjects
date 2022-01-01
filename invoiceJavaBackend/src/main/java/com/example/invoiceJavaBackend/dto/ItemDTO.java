@@ -11,25 +11,19 @@ public class ItemDTO {
 
     private String pkwiu;
 
-    @NotEmpty
     private Integer quantity;
 
     @NotEmpty
     private String unit;
 
-    @NotEmpty
     private BigDecimal netPrice;
 
-    @NotEmpty
     private BigDecimal netValue;
 
-    @NotEmpty
     private BigDecimal taxRate;
 
-    @NotEmpty
     private BigDecimal taxValue;
 
-    @NotEmpty
     private BigDecimal grossValue;
 
     public ItemDTO() {
