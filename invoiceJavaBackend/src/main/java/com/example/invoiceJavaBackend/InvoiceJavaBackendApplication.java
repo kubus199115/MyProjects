@@ -1,14 +1,14 @@
 package com.example.invoiceJavaBackend;
 
-import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
+// import java.math.BigDecimal;
+// import java.text.SimpleDateFormat;
+// import java.util.ArrayList;
+// import java.util.List;
 
 import com.example.invoiceJavaBackend.dto.ContractorDTO;
-import com.example.invoiceJavaBackend.dto.InvoiceDTO;
-import com.example.invoiceJavaBackend.dto.InvoiceDetailsDTO;
-import com.example.invoiceJavaBackend.dto.ItemDTO;
+// import com.example.invoiceJavaBackend.dto.InvoiceDTO;
+// import com.example.invoiceJavaBackend.dto.InvoiceDetailsDTO;
+// import com.example.invoiceJavaBackend.dto.ItemDTO;
 import com.example.invoiceJavaBackend.repository.ContractorRepository;
 import com.example.invoiceJavaBackend.repository.InvoiceRepository;
 
@@ -50,7 +50,7 @@ public class InvoiceJavaBackendApplication {
 
 			repository.addContractor(contractorDTO1);
 
-			ContractorDTO contractorDTO2 = repository.findContractorByName("Firma 1");
+			/* ContractorDTO contractorDTO2 = repository.findContractorByName("Firma 1");
 			
 			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -83,7 +83,7 @@ public class InvoiceJavaBackendApplication {
 			invoiceDetailsDTO.setContractor(contractorDTO2);
 			invoiceDetailsDTO.setItems(items);
 
-			invoiceRepository.addInvoice(invoiceDetailsDTO);
+			invoiceRepository.addInvoice(invoiceDetailsDTO); */
 			
 		};
 	}

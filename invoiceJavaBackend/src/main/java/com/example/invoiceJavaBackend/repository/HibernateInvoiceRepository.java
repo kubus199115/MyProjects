@@ -134,7 +134,8 @@ public class HibernateInvoiceRepository implements InvoiceRepository {
 
         String invoiceNumber = "---";
         
-        List<InvoiceEntity> invoices = entityManager.createQuery("select i from InvoiceEntity i order by i.addingDate desc",
+        // getting only outgoing invoice sorted by adding date
+        List<InvoiceEntity> invoices = entityManager.createQuery("select i from InvoiceEntity i where i.type='Outgoing' order by i.addingDate desc",
                     InvoiceEntity.class)
                     .setMaxResults(1).getResultList();
 
