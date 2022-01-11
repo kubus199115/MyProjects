@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvoiceSharpWPFApp", "InvoiceSharpWPFApp\InvoiceSharpWPFApp.csproj", "{106F592D-4B66-46E5-B4C5-A2E5EA4F70AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{106F592D-4B66-46E5-B4C5-A2E5EA4F70AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106F592D-4B66-46E5-B4C5-A2E5EA4F70AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106F592D-4B66-46E5-B4C5-A2E5EA4F70AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106F592D-4B66-46E5-B4C5-A2E5EA4F70AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82599AD7-A630-4030-BD3C-95E0F5FF62BE}
+	EndGlobalSection
+EndGlobal
