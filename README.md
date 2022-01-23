@@ -14,3 +14,6 @@ Invoice management frontend application written in WPF (.NET)
 To run project, please open solution in Visual Studio. <b>You need a backend app runing to use this application. This program is available in invoiceJavaBackend.</b>
 
 Application use RestSharp to connect to API and PDFSharp to generate PDF. <b>Please don't update RestSharp, new version is completely different!</b>
+
+# springWorkOrder (PL)
+Work order managment application written in Java full stack. It uses Spring Framework and Thymeleaf. Project created in Netbeans IDE.
