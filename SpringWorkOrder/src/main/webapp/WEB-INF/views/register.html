@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>SpringDBProject</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <h1>Register</h1>
+        
+        <form method="POST" th:object="${user}">
+            <!-- ERRORS DISPLAY -->
+            <div class="errors" th:if="${#fields.hasErrors('*')}">
+                <ul>
+                    <li th:each="err : ${#fields.errors('*')}"
+                        th:text="${err}">Input is incorrect</li>
+                </ul>
+            </div>
+            
+            <input type="text" th:field="*{username}"/><br/>
+            <input type="password" th:field="*{password}"/><br/>
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+            <input type="submit" value="Register"/>
+        </form>
+    </body>
+</html>
