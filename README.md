@@ -1,6 +1,6 @@
 # invoiceJavaBackend
 Invoice management backend application written in Spring boot and JPA
-With invoiceSharpApp they are make application to manage invoices in small company. It is very simple program, but you can creating incoming and outgoing invoices, creating contractors and printing invoices in PDF.
+With invoiceSharpApp they are make application to manage invoices in small company. It is very simple program, but you can create incoming and outgoing invoices, create contractors and print invoices in PDF.
 
 It requires jdk >=11
 
@@ -19,9 +19,10 @@ Application use RestSharp to connect to API and PDFSharp to generate PDF. <b>Ple
 # springWorkOrder (PL)
 Work order managment application written in Java full stack. It uses Spring Framework and Thymeleaf. Project created in Netbeans IDE.
 This is demo project created for my friend in 2017. It only shows how that application could be work and look for presentation purpose. Despite this, this app offers features like:
- - managing work orders
+ - managing work orders (start, pause, end, add comments)
+ - searching work orders
  - adding employers to work orders
- - checking status of work orders
+ - checking status of work orders (info about time remaining, delay etc.)
  - import/export from/to excel
 
 To run this app i recomend use docker. Docker files are in project folder in /Docker. It contains glasfish server and WAR.
