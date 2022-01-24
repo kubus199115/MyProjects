@@ -21,11 +21,18 @@ Work order managment application written in Java full stack. It uses Spring Fram
 This is demo project created for my friend in 2017. It only shows how that application could be work and look for presentation purpose. Despite this, this app offers features like:
  - managing work orders
  - adding employers to work orders
+ - checking status of work orders
+ - import/export from/to excel
 
 To run this app i recomend use docker. Docker files are in project folder in /Docker. It contains glasfish server and WAR.
 In /Docker please type:
+
 <code>docker build -t YOUR_NAME .</code>
+
 <code>docker run -dp 8000:8080 YOUR_NAME</code>
+
 In docker file it is script that creates a few users. For example admin with password admin.
+
 </b>App is available in localhost:8000/</b>
+
 <b> This app is in polish, so if you don't polish, probalbly you will not be able to use this program;)</b>
