@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\PROGRAMY\C#\InvoiceSharpWPFApp\InvoiceSharpWPFApp\obj\Debug\
+C:\Users\jakub\Documents\GIT\JAVA\invoiceJavaBackend\InvoiceSharpWPFApp\InvoiceSharpWPFApp\obj\Debug\
 InvoiceSharpWPFApp
 none
 false
 DEBUG;TRACE
-D:\PROGRAMY\C#\InvoiceSharpWPFApp\InvoiceSharpWPFApp\App.xaml
+C:\Users\jakub\Documents\GIT\JAVA\invoiceJavaBackend\InvoiceSharpWPFApp\InvoiceSharpWPFApp\App.xaml
 41802885252
 
 16-76688242
-28472644845
+28619626640
 AddContractorWindow.xaml;AddIncomingInvoiceWindow.xaml;AddInvoiceWindow.xaml;MainWindow.xaml;
 
 False
