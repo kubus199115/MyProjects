@@ -1,0 +1,221 @@
+body {
+  background: url('../img/background2.png') center center fixed;
+}
+
+/* delete problem with xs center */
+[class^=col-] {
+    width: 100%;
+}
+
+/* change default max-width for container */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1280px;
+}
+
+/*NAVBAR
+-------------------------------------------------- */
+.navbar-custom {
+    background-color: white;
+	font-weight: bold;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(0,0,0,.8);
+}
+
+.nav-item {
+	padding-left: 20px;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(29, 57, 43, 0.7);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: rgba(29, 57, 43, 1);
+}
+
+/* custom hamburger */
+.navbar-toggler {
+    border-color: rgba(29, 57, 43, 1);
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(29, 57, 43, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* SCHOOL
+-------------------------------------------------- */
+.schooltop {
+	padding-top: 120px;
+	padding-bottom: 50px;
+	text-align: center;
+	color: rgba(0,0,0,.8);
+}
+
+.schoolnameorange {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	color: rgba(255,255,255,.8);
+	background-color: #fe7a0bff;
+}
+
+.schoolnamered {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	color: rgba(255,255,255,.8);
+	background-color: #ff1420ff;
+}
+
+.schoolnamegreen {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	color: rgba(255,255,255,.8);
+	background-color: #56ca85ff;
+}
+
+.school {
+	padding-top: 20px;
+	background: white;
+}
+
+.school h1 {
+	margin-bottom: 50px;
+	color: rgba(0,0,0,.8);
+}
+
+.school p {
+	margin-bottom: 50px;
+}
+
+.school h2 {
+	margin-bottom: 20px;
+	color: rgba(0,0,0,.8);
+}
+
+.school .liorange {
+	list-style-image: url('../img/lio2.png');
+	font-size: 22px;
+}
+
+.school .lired {
+	list-style-image: url('../img/lio3.png');
+	font-size: 22px;
+}
+
+.school .ligreen {
+	list-style-image: url('../img/lio4.png');
+	font-size: 22px;
+}
+
+.school ul {
+	margin-bottom: 50px;
+}
+
+.school img {
+	margin-top: 20px;
+}
+
+.school .schoolbutton {
+	color: rgba(0,0,0,.8);
+	border-radius: 5px;
+	background-color: rgba(253,149,8,0.2);
+	border-color: rgba(0,0,0,.8);
+	border-width: 3px;
+	padding: 10px;
+}
+
+.school .schooldesc {
+	padding-left: 50px;
+}
+
+.school .titleorange {
+	color: #fe7a0bff;
+}
+
+.school .titlered {
+	color: #ff1420ff;
+}
+
+.school .titlegreen {
+	color: #56ca85ff;
+}
+
+.school .desc {
+	margin-top: 20px;
+	text-align: justify;
+}
+
+.time {
+	background-color: white;
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+}
+
+.timedivorange {
+	padding: 20px;
+	border-radius: 20px;
+	background-color: #fe7a0bff;
+	text-align: center;
+}
+
+.timedivred {
+	padding: 20px;
+	border-radius: 20px;
+	background-color: #ff1420ff;
+	text-align: center;
+}
+
+.timedivgreen {
+	padding: 20px;
+	border-radius: 20px;
+	background-color: #56ca85ff;
+	text-align: center;
+}
+
+.time h4{
+	color: rgba(255,255,255,.8);
+}
+
+/* FOOTER
+-------------------------------------------------- */
+.footer {
+	color: rgba(255,255,255,.8);
+	background-color: rgba(29, 57, 43, 1);
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+}
+
+.footer ul {
+	list-style-type: none;
+}
+
+.footer img {
+	margin-bottom: 20px;
+}
+
+.footer a {
+	color: rgba(255,255,255,.8);
+}
+
+/* RESPONSIVE
+-------------------------------------------------- */
+/* LG */
+@media (max-width: 992px) {
+	.school .schooldesc {
+	padding-left: 15px;
+	}
+	
+	.footer ul {
+	padding-left: 0px;
+	}
+	
+}
