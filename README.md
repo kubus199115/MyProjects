@@ -37,3 +37,6 @@ In docker file it is script that creates a few users. For example admin with pas
 </b>App is available in localhost:8000/</b>
 
 <b> This app is in polish, so if you don't polish, probalbly you will not be able to use this program;)</b>
+
+# kwir
+Web page created for company "Kwalifikacje - Inteligentny Rozwój. Now, this page doesn't exist, but code is here. Used technology: HTML, CSS, Bootstrap, PHP, mysql. I created graphics in Inkscape and gimp. Page has admin panel for adding a news and editing one part of page.
