@@ -14,12 +14,21 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.web.servlet.MockMvc;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 
 @ExtendWith(SpringExtension.class)
+@AutoConfigureMockMvc
 @SpringBootTest
 public class AppTests {
+
+    @Autowired
+    private MockMvc mvc;
     
     @Autowired
     private InvoiceRepository invoiceRepository;
@@ -57,6 +66,14 @@ public class AppTests {
         assertThrows(NoResultException.class, () -> {
             contractorRepository.findContractorByName(companyName);
         });
+    }
+
+    @Test
+    public void givenContractor_whenGetContractor_thenStatus200() throws Exception {
+        ContractorDTO contractor = getContractorForTest();
+        contractorRepository.addContractor(contractor);
+
+        mvc.perform(get("/getContractor/" + contractor.getName())).andExpect(status().isOk());
     }
 
     private ContractorDTO getContractorForTest() {

@@ -164,36 +164,36 @@ namespace InvoiceSharpWPFApp.Generator
                 if(item.taxRate == 0.23m)
                 {
                     netValue23 += item.netValue;
-                    totalNetValue += netValue23;
+                    totalNetValue += item.netValue;
                     taxValue23 += item.taxValue;
-                    totalTaxValue += taxValue23;
+                    totalTaxValue += item.taxValue;
                     grossValue23 += item.grossValue;
-                    totalGrossValue += grossValue23;
+                    totalGrossValue += item.grossValue;
                 }
                 else if (item.taxRate == 0.08m)
                 {
                     netValue8 += item.netValue;
-                    totalNetValue += netValue8;
+                    totalNetValue += item.netValue;
                     taxValue8 += item.taxValue;
-                    totalTaxValue += taxValue8;
+                    totalTaxValue += item.taxValue;
                     grossValue8 += item.grossValue;
-                    totalGrossValue += grossValue8;
+                    totalGrossValue += item.grossValue;
                 }
                 else if (item.taxRate == 0.05m)
                 {
                     netValue5 += item.netValue;
-                    totalNetValue += netValue5;
+                    totalNetValue += item.netValue;
                     taxValue5 += item.taxValue;
-                    totalTaxValue += taxValue5;
+                    totalTaxValue += item.taxValue;
                     grossValue5 += item.grossValue;
-                    totalGrossValue += grossValue5;
+                    totalGrossValue += item.grossValue;
                 }
                 else if (item.taxRate == 0)
                 {
                     netValue0 += item.netValue;
-                    totalNetValue += netValue0;
+                    totalNetValue += item.netValue;
                     grossValue0 += item.grossValue;
-                    totalGrossValue += grossValue0;
+                    totalGrossValue += item.grossValue;
                 }
             }
 
