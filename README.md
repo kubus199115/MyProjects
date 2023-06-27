@@ -1,3 +1,6 @@
+# python
+A few projects in python with physics simulations in pygame.
+
 # invoiceJavaBackend
 Invoice management backend application written in Spring boot and JPA
 With invoiceSharpApp they are make application to manage invoices in small company. It is very simple program, but you can create incoming and outgoing invoices, create contractors and print invoices in PDF.
