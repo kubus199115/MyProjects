@@ -1,4 +1,4 @@
-# python
+# python_physics
 A few projects in python with physics simulations in pygame.
 
 # invoiceJavaBackend
