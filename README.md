@@ -16,13 +16,18 @@ To run project, please open solution in Visual Studio. <b>You need a backend app
 
 Application use RestSharp to connect to API and PDFSharp to generate PDF. <b>Please don't update RestSharp, new version is completely different!</b>
 
-# platform game (PL)
+# platform game
 Platform game written in SDL for Engineering Thesis. Project is in Code::Blocks IDE. It uses older version of SDL (1.2). To run this app in ubuntu you need SDL libraries. You can install this libraries in terminal by fallowing commands:
-<code> sudo apt install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev</code>
-You need to add linker libraries in linker settings: SDL, SDL_image, SDL_mixer, SDL_ttf.
-Code is in polish.
 
-# springWorkOrder (PL)
+<code> sudo apt install libsdl1.2-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev</code>
+
+You need to add linker libraries in linker settings: SDL, SDL_image, SDL_mixer, SDL_ttf.
+
+UML diagram is in diagram_uml folder.
+
+<b>Code is in polish.</b>
+
+# springWorkOrder
 Work order managment application written in Java full stack. It uses Spring Framework and Thymeleaf. Project created in Netbeans IDE.
 This is demo project created for my friend in 2017. It only shows how that application could be work and look for presentation purpose. Despite this, this app offers features like:
  - managing work orders (start, pause, end, add comments)
