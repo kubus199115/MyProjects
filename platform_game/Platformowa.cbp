@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Platformowa" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Platformowa" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Platformowa" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="SDL" />
+			<Add library="SDL_image" />
+			<Add library="SDL_ttf" />
+			<Add library="SDL_mixer" />
+		</Linker>
+		<Unit filename="Animacja.cpp" />
+		<Unit filename="Animacja.h" />
+		<Unit filename="Element.cpp" />
+		<Unit filename="Element.h" />
+		<Unit filename="FPS.cpp" />
+		<Unit filename="FPS.h" />
+		<Unit filename="Gra.cpp" />
+		<Unit filename="Gra.h" />
+		<Unit filename="Interfejs.cpp" />
+		<Unit filename="Interfejs.h" />
+		<Unit filename="Kafel.cpp" />
+		<Unit filename="Kafel.h" />
+		<Unit filename="Kamera.cpp" />
+		<Unit filename="Kamera.h" />
+		<Unit filename="Muzyka.cpp" />
+		<Unit filename="Muzyka.h" />
+		<Unit filename="Obiekt.cpp" />
+		<Unit filename="Obiekt.h" />
+		<Unit filename="Powierzchnia.cpp" />
+		<Unit filename="Powierzchnia.h" />
+		<Unit filename="Poziom.cpp" />
+		<Unit filename="Poziom.h" />
+		<Unit filename="Stale.h" />
+		<Unit filename="Zdarzenie.cpp" />
+		<Unit filename="Zdarzenie.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

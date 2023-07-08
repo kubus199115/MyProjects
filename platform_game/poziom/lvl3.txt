@@ -1,0 +1,15 @@
+2
+grafika/poziom/lvl3.png
+grafika/poziom/tlo3.png
+grafika/poziom/element.png
+poziom/level3.txt
+5
+7
+0
+40:280:0
+360:160:0
+800:280:0
+1160:240:0
+1480:480:0
+1160:480:1
+1440:480:2

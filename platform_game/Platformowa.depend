@@ -1,0 +1,379 @@
+# depslib dependency file v1.0
+1385385360 source:c:\users\kubus\desktop\studia2\studia\informatyka\platformowa\gra.cpp
+	"Gra.h"
+
+1385384380 c:\users\kubus\desktop\studia2\studia\informatyka\platformowa\gra.h
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<string>
+	<sstream>
+	"Stale.h"
+	"Powierzchnia.h"
+	"Zdarzenie.h"
+	"FPS.h"
+	"Objekt.h"
+
+1398426238 
+
+1385385636 c:\users\kubus\desktop\studia2\studia\informatyka\platformowa\stale.h
+
+1385141149 c:\users\kubus\desktop\studia2\studia\informatyka\platformowa\powierzchnia.h
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_ttf.h>
+
+1385144749 tf.h>
+
+1385141149 source:c:\users\kubus\desktop\studia2\studia\informatyka\platformowa\powierzchnia.cpp
+	"Powierzchnia.h"
+
+1385144749 nia.h"
+
+1380119727 source:c:\users\kubus\desktop\studia2\studia\informatyka\platformowa\zdarzenie.cpp
+	"Zdarzenie.h"
+
+1394894173 .h"
+
+1380119727 c:\users\kubus\desktop\studia2\studia\informatyka\platformowa\zdarzenie.h
+	<SDL/SDL.h>
+
+1395057765 >
+
+1385382332 source:c:\users\kubus\desktop\studia2\studia\informatyka\platformowa\fps.cpp
+	"FPS.h"
+
+1385382332 c:\users\kubus\desktop\studia2\studia\informatyka\platformowa\fps.h
+	<SDL/SDL.h>
+
+1385385093 c:\users\kubus\desktop\studia2\studia\informatyka\platformowa\objekt.h
+	"Stale.h"
+	"Powierzchnia.h"
+	<SDL/SDL.h>
+
+1385385254 source:c:\users\kubus\desktop\studia2\studia\informatyka\platformowa\objekt.cpp
+	"Objekt.h"
+
+1394719175 source:d:\studia\informatyka\platformowa\fps.cpp
+	"FPS.h"
+
+1394719175 d:\studia\informatyka\platformowa\fps.h
+	<SDL/SDL.h>
+
+1401189298 source:d:\studia\informatyka\platformowa\gra.cpp
+	"Gra.h"
+
+1398424046 d:\studia\informatyka\platformowa\gra.h
+	<SDL/SDL.h>
+	<string>
+	<sstream>
+	"Zdarzenie.h"
+	"FPS.h"
+	"Obiekt.h"
+	"Interfejs.h"
+	"Muzyka.h"
+
+1398249280 d:\studia\informatyka\platformowa\stale.h
+
+1385144749 d:\studia\informatyka\platformowa\powierzchnia.h
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_ttf.h>
+
+1398422592 d:\studia\informatyka\platformowa\zdarzenie.h
+	<SDL/SDL.h>
+
+1397850644 d:\studia\informatyka\platformowa\objekt.h
+	"Stale.h"
+	"Powierzchnia.h"
+	"Animacja.h"
+	"Kamera.h"
+	"Poziom.h"
+	<SDL/SDL.h>
+	<vector>
+
+1397903735 source:d:\studia\informatyka\platformowa\objekt.cpp
+	"Objekt.h"
+
+1385144749 source:d:\studia\informatyka\platformowa\powierzchnia.cpp
+	"Powierzchnia.h"
+
+1398422592 source:d:\studia\informatyka\platformowa\zdarzenie.cpp
+	"Zdarzenie.h"
+
+1393251478 source:d:\studia\informatyka\platformowa\animacja.cpp
+	"Animacja.h"
+
+1393251478 h"
+
+1395056826 d:\studia\informatyka\platformowa\animacja.h
+	<SDL/SDL.h>
+
+1385837840 d:\studia\informatyka\platformowa\kamera.h
+	<SDL/SDL.h>
+	"Stale.h"
+
+1394633122 source:d:\studia\informatyka\platformowa\kamera.cpp
+	"Kamera.h"
+
+1386077292 source:d:\studia\informatyka\platformowa\kafel.cpp
+	"Kafel.h"
+
+1386074430 d:\studia\informatyka\platformowa\kafel.h
+	<SDL/SDL.h>
+	"Stale.h"
+
+1395057765 d:\studia\informatyka\platformowa\poziom.h
+	"Kafel.h"
+	"Element.h"
+	"Powierzchnia.h"
+	"Kamera.h"
+	<vector>
+	<SDL/SDL.h>
+
+1398279310 source:d:\studia\informatyka\platformowa\poziom.cpp
+	"Poziom.h"
+
+1398425247 d:\studia\informatyka\platformowa\element.h
+	<SDL/SDL.h>
+	"Stale.h"
+
+1391436786 source:d:\studia\informatyka\platformowa\element.cpp
+	"Element.h"
+
+1391436786 "
+
+1395056625 d:\studia\informatyka\platformowa\interfejs.h
+	<SDL/SDL.h>
+	<string>
+	<sstream>
+	"Powierzchnia.h"
+	"Stale.h"
+
+1394894173 source:d:\studia\informatyka\platformowa\interfejs.cpp
+	"Interfejs.h"
+
+1396348123 d:\studia\informatyka\platformowa\muzyka.h
+	<SDL/SDL_mixer.h>
+
+1396348123 ixer.h>
+
+1396348123 source:d:\studia\informatyka\platformowa\muzyka.cpp
+	"Muzyka.h"
+
+1398426238 d:\studia\informatyka\platformowa\obiekt.h
+	"Stale.h"
+	"Powierzchnia.h"
+	"Animacja.h"
+	"Kamera.h"
+	"Poziom.h"
+	<SDL/SDL.h>
+	<vector>
+	<cmath>
+
+1400757661 source:d:\studia\informatyka\platformowa\obiekt.cpp
+	"Obiekt.h"
+
+1393247878 source:/media/kubus/USB DISK/studia/informatyka/Platformowa/Animacja.cpp
+	"Animacja.h"
+
+1395053226 /media/kubus/USB DISK/studia/informatyka/Platformowa/Animacja.h
+	<SDL/SDL.h>
+
+1391433186 source:/media/kubus/USB DISK/studia/informatyka/Platformowa/Element.cpp
+	"Element.h"
+
+1398425247 /media/kubus/USB DISK/studia/informatyka/Platformowa/Element.h
+	<SDL/SDL.h>
+	"Stale.h"
+
+1398249280 /media/kubus/USB DISK/studia/informatyka/Platformowa/Stale.h
+
+1394715575 source:/media/kubus/USB DISK/studia/informatyka/Platformowa/FPS.cpp
+	"FPS.h"
+
+1394715575 /media/kubus/USB DISK/studia/informatyka/Platformowa/FPS.h
+	<SDL/SDL.h>
+
+1401189298 source:/media/kubus/USB DISK/studia/informatyka/Platformowa/Gra.cpp
+	"Gra.h"
+
+1398424046 /media/kubus/USB DISK/studia/informatyka/Platformowa/Gra.h
+	<SDL/SDL.h>
+	<string>
+	<sstream>
+	"Zdarzenie.h"
+	"FPS.h"
+	"Obiekt.h"
+	"Interfejs.h"
+	"Muzyka.h"
+
+1398422592 /media/kubus/USB DISK/studia/informatyka/Platformowa/Zdarzenie.h
+	<SDL/SDL.h>
+
+1398426238 /media/kubus/USB DISK/studia/informatyka/Platformowa/Obiekt.h
+	"Stale.h"
+	"Powierzchnia.h"
+	"Animacja.h"
+	"Kamera.h"
+	"Poziom.h"
+	<SDL/SDL.h>
+	<vector>
+	<cmath>
+
+1385141149 /media/kubus/USB DISK/studia/informatyka/Platformowa/Powierzchnia.h
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL/SDL_ttf.h>
+
+1385834240 /media/kubus/USB DISK/studia/informatyka/Platformowa/Kamera.h
+	<SDL/SDL.h>
+	"Stale.h"
+
+1395054165 /media/kubus/USB DISK/studia/informatyka/Platformowa/Poziom.h
+	"Kafel.h"
+	"Element.h"
+	"Powierzchnia.h"
+	"Kamera.h"
+	<vector>
+	<SDL/SDL.h>
+
+1386070830 /media/kubus/USB DISK/studia/informatyka/Platformowa/Kafel.h
+	<SDL/SDL.h>
+	"Stale.h"
+
+1395053025 /media/kubus/USB DISK/studia/informatyka/Platformowa/Interfejs.h
+	<SDL/SDL.h>
+	<string>
+	<sstream>
+	"Powierzchnia.h"
+	"Stale.h"
+
+1396348123 /media/kubus/USB DISK/studia/informatyka/Platformowa/Muzyka.h
+	<SDL/SDL_mixer.h>
+
+1394890573 source:/media/kubus/USB DISK/studia/informatyka/Platformowa/Interfejs.cpp
+	"Interfejs.h"
+
+1386073692 source:/media/kubus/USB DISK/studia/informatyka/Platformowa/Kafel.cpp
+	"Kafel.h"
+
+1394629522 source:/media/kubus/USB DISK/studia/informatyka/Platformowa/Kamera.cpp
+	"Kamera.h"
+
+1396348123 source:/media/kubus/USB DISK/studia/informatyka/Platformowa/Muzyka.cpp
+	"Muzyka.h"
+
+1400757661 source:/media/kubus/USB DISK/studia/informatyka/Platformowa/Obiekt.cpp
+	"Obiekt.h"
+
+1385141149 source:/media/kubus/USB DISK/studia/informatyka/Platformowa/Powierzchnia.cpp
+	"Powierzchnia.h"
+
+1398279310 source:/media/kubus/USB DISK/studia/informatyka/Platformowa/Poziom.cpp
+	"Poziom.h"
+
+1398422592 source:/media/kubus/USB DISK/studia/informatyka/Platformowa/Zdarzenie.cpp
+	"Zdarzenie.h"
+
+1393247878 source:/home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Animacja.cpp
+	"Animacja.h"
+
+1688839917 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Animacja.h
+	"SDL/SDL.h"
+
+1391433186 source:/home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Element.cpp
+	"Element.h"
+
+1688839917 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Element.h
+	"SDL/SDL.h"
+	"Stale.h"
+
+1398249280 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Stale.h
+
+1394715575 source:/home/kubus/Dokumenty/GitHub/MyProjects/platform_game/FPS.cpp
+	"FPS.h"
+
+1688839917 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/FPS.h
+	"SDL/SDL.h"
+
+1401189298 source:/home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Gra.cpp
+	"Gra.h"
+
+1688839780 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Gra.h
+	"SDL/SDL.h"
+	<string>
+	<sstream>
+	"Zdarzenie.h"
+	"FPS.h"
+	"Obiekt.h"
+	"Interfejs.h"
+	"Muzyka.h"
+
+1688839806 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Zdarzenie.h
+	"SDL/SDL.h"
+
+1688839850 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Obiekt.h
+	"Stale.h"
+	"Powierzchnia.h"
+	"Animacja.h"
+	"Kamera.h"
+	"Poziom.h"
+	"SDL/SDL.h"
+	<vector>
+	<cmath>
+
+1688840024 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Powierzchnia.h
+	"SDL/SDL.h"
+	"SDL/SDL_image.h"
+	"SDL/SDL_ttf.h"
+
+1688839974 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Kamera.h
+	"SDL/SDL.h"
+	"Stale.h"
+
+1688840036 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Poziom.h
+	"Kafel.h"
+	"Element.h"
+	"Powierzchnia.h"
+	"Kamera.h"
+	<vector>
+	"SDL/SDL.h"
+
+1688839974 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Kafel.h
+	"SDL/SDL.h"
+	"Stale.h"
+
+1688839916 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Interfejs.h
+	"SDL/SDL.h"
+	<string>
+	<sstream>
+	"Powierzchnia.h"
+	"Stale.h"
+
+1688839974 /home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Muzyka.h
+	"SDL/SDL_mixer.h"
+
+1394890573 source:/home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Interfejs.cpp
+	"Interfejs.h"
+
+1386073692 source:/home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Kafel.cpp
+	"Kafel.h"
+
+1394629522 source:/home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Kamera.cpp
+	"Kamera.h"
+
+1396348123 source:/home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Muzyka.cpp
+	"Muzyka.h"
+
+1400757661 source:/home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Obiekt.cpp
+	"Obiekt.h"
+
+1385141149 source:/home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Powierzchnia.cpp
+	"Powierzchnia.h"
+
+1398279310 source:/home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Poziom.cpp
+	"Poziom.h"
+
+1398422592 source:/home/kubus/Dokumenty/GitHub/MyProjects/platform_game/Zdarzenie.cpp
+	"Zdarzenie.h"
+
